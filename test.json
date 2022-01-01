@@ -1,0 +1,18 @@
+[{
+  "chatroomId": "67275431",
+  "idClient": "a4793976-e7fa-4c07-8a03-0624066352cf",
+  "from": "20190415142856_9mras9rrdbngt72",
+  "fromNick": "",
+  "fromAvatar": "",
+  "fromCustom": "",
+  "userUpdateTime": 1640936319470,
+  "custom": "{\"messageType\":\"TEXT\",\"bubbleId\":\"680096322808496128\",\"roomId\":\"67275431\",\"sourceId\":\"67275431\",\"module\":\"session\",\"config\":{\"build\":\"21091401\",\"phoneName\":\"unknow\",\"version\":\"6.2.4\",\"mobileOperators\":\"中国移动\",\"phoneSystemVersion\":\"14.8.1\"},\"sessionRole\":3,\"text\":\"听说你今天穿蓬蓬裙➕双马尾👀\",\"fromApp\":\"201811\",\"md5\":\"09bd683f28c860d847476494151e5ea2\",\"user\":{\"roleId\":3,\"userId\":711732,\"avatar\":\"\\/avatar\\/2021\\/1001\\/711732x76v7diki6bbqfz8vjo412bh.jpg\",\"pfUrl\":\"\",\"vip\":false,\"teamLogo\":\"\\/mediasource\\/teamLogo2\\/all\\/snh48_s2.png\",\"nickName\":\"SNH48-彭嘉敏\"},\"keyWordStatus\":false}",
+  "fromClientType": "iOS",
+  "time": 1640936322612,
+  "type": "text",
+  "text": "",
+  "resend": false,
+  "status": "success",
+  "flow": "in"
+}]
+

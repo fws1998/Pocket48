@@ -22,8 +22,9 @@ with open("roomId.json", 'r', encoding='UTF-8') as file:
 
 
 def get_xox_message(name):
-    body["ownerId"] = ""
-    body["roomId"] = ""
+    a, b = search_room(name)
+    body["ownerId"] = b
+    body["roomId"] = a
     session = requests.session()
     res = session.post("https://pocketapi.48.cn/im/api/v1/chatroom/msg/list/homeowner", headers=header,
                        json=body).json()
@@ -46,4 +47,4 @@ def search_room(name):
     return res["targetId"], res["ownerId"]
 
 
-get_all_msg("邵雪聪")
+get_xox_message("邵雪聪")
