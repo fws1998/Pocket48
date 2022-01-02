@@ -14,5 +14,29 @@
   "resend": false,
   "status": "success",
   "flow": "in"
+},{
+  "chatroomId": "67275431",
+  "idClient": "af78d1ab-39b9-4f6e-a1b7-7afd85e13e30",
+  "from": "20190415141454_ywcti05htvv7jjl",
+  "fromNick": "",
+  "fromAvatar": "",
+  "fromCustom": "",
+  "userUpdateTime": 1640874625984,
+  "custom": "{\"config\":{\"build\":\"21091401\",\"phoneName\":\"unknow\",\"version\":\"6.2.4\",\"mobileOperators\":\"中国移动\",\"phoneSystemVersion\":\"15.1.1\"},\"roomId\":\"67275431\",\"module\":\"session\",\"md5\":\"c7c182b55bd032b5d60607ec51d40886\",\"sessionRole\":2,\"sourceId\":\"67275431\",\"bubbleId\":\"338785331586015362\",\"keyWordStatus\":false,\"messageType\":\"IMAGE\",\"fromApp\":\"201811\",\"user\":{\"roleId\":3,\"userId\":6737,\"avatar\":\"\\/avatar\\/2021\\/0930\\/6737xg65aeqelpbf4a237o8t4fbo.jpg\",\"pfUrl\":\"\",\"vip\":false,\"teamLogo\":\"\\/mediasource\\/teamLogo2\\/all\\/snh48_s2.png\",\"nickName\":\"SNH48-邵雪聪\"}}",
+  "fromClientType": "iOS",
+  "time": 1640874640929,
+  "type": "image",
+  "text": "",
+  "resend": false,
+  "status": "success",
+  "file": {
+    "size": 104871,
+    "ext": "jpg",
+    "w": 826,
+    "url": "https://nim.nosdn.127.net/NDA5MzEwOA==/bmltYV83MjUxOTUyMDUxXzE2NDAzNTU4NjMyMDdfOGE3OGViZTUtMzU5MC00MDc1LTk0NjctMDdmMzU0ZDQ3ZWI1",
+    "md5": "a96063c8bde9904b1d3a2b1d2aff7a8c",
+    "h": 1102
+  },
+  "flow": "in"
 }]
 
