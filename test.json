@@ -1,52 +1,18 @@
-[{
-  "chatroomId": "67362289",
-  "idClient": "591ba5e2-2a33-4a96-9eff-f0f4ee27ab93",
-  "from": "20190415141812_szd6d8h2cd1tic5",
+[ {
+  "chatroomId": "67275492",
+  "idClient": "d8d4d3ad60d54a7a8d9441e8bb3b4568",
+  "from": "20200618212447_khwpg9x50k10p4q",
   "fromNick": "",
   "fromAvatar": "",
   "fromCustom": "",
-  "userUpdateTime": 1641116175134,
-  "custom": "{\"config\":{\"build\":\"21121701\",\"phoneName\":\"unknow\",\"version\":\"6.2.6\",\"mobileOperators\":\"中国联通\",\"phoneSystemVersion\":\"14.6\"},\"roomId\":\"67362289\",\"module\":\"session\",\"md5\":\"4b785cb6ed83952f70ea7532e91c6249\",\"sessionRole\":2,\"sourceId\":\"67362289\",\"bubbleId\":\"338785331586015554\",\"keyWordStatus\":false,\"messageType\":\"AUDIO\",\"fromApp\":\"201811\",\"user\":{\"roleId\":3,\"userId\":63559,\"avatar\":\"\\/avatar\\/2022\\/0102\\/63559xxobp64wfqd45t894pr6f653.jpg\",\"pfUrl\":\"\",\"vip\":false,\"teamLogo\":\"\\/mediasource\\/teamLogo2\\/all\\/snh48_n2.png\",\"nickName\":\"白色小狐狸\"}}",
-  "fromClientType": "iOS",
-  "time": 1641116542487,
-  "type": "audio",
+  "userUpdateTime": 1641263710707,
+  "custom": "{\"sourceId\":\"67275492\",\"sessionRole\":0,\"fromApp\":\"201811\",\"module\":\"session\",\"roomId\":\"67275492\",\"messageType\":\"EXPRESSIMAGE\",\"emotionRemote\":\"\\/bubble\\/emoj\\/size_150x150\\/594938220645257216.jpg\",\"width\":150,\"bubbleId\":\"0\",\"user\":{\"pfUrl\":\"\",\"teamLogo\":\"\",\"badge\":[\"\\/mediasource\\/badge\\/small\\/ddjj_1_s.png\"],\"level\":3,\"nickName\":\"莫莫的紫羽麒军\",\"roleId\":1,\"avatar\":\"\\/20201024\\/1603540481996rBnl8FhWne.jpeg\",\"vip\":false,\"userId\":34306},\"config\":{\"mobileOperators\":\"未知\",\"phoneSystemVersion\":\"11\",\"build\":\"181022\",\"version\":\"6.2.6\",\"phoneName\":\"Redmi Note 8 Pro\"},\"height\":150,\"md5\":\"8705c02d9c86ec4d188c3d01325c07ae\"}",
+  "fromClientType": "Android",
+  "time": 1641263715098,
+  "type": "text",
   "text": "",
   "resend": false,
-  "callbackExt": "",
   "status": "success",
-  "file": {
-    "size": 16572,
-    "ext": "aac",
-    "dur": 4551,
-    "url": "https://nim-nosdn.netease.im/NDA5MzEwOA==/bmltYV83MjUxNzg3MDQ1XzE2NDA1ODc4NzQ2NzdfMTkzNWVlN2UtZmRlMS00YzNmLTgyMWQtZDQ2OWNiNDA3ZTUz",
-    "md5": "6868fd552a8825874aac9f041d127e86",
-    "mp3Url": "https://nim-nosdn.netease.im/NDA5MzEwOA==/bmltYV83MjUxNzg3MDQ1XzE2NDA1ODc4NzQ2NzdfMTkzNWVlN2UtZmRlMS00YzNmLTgyMWQtZDQ2OWNiNDA3ZTUz?audioTrans&type=mp3"
-  },
-  "flow": "in"
-}, {
-  "chatroomId": "67362289",
-  "idClient": "55d6b13f-7101-4fc3-acde-31c7055e50e0",
-  "from": "20190415141812_szd6d8h2cd1tic5",
-  "fromNick": "",
-  "fromAvatar": "",
-  "fromCustom": "",
-  "userUpdateTime": 1641116175134,
-  "custom": "{\"config\":{\"build\":\"21121701\",\"phoneName\":\"unknow\",\"version\":\"6.2.6\",\"mobileOperators\":\"中国联通\",\"phoneSystemVersion\":\"14.6\"},\"roomId\":\"67362289\",\"module\":\"session\",\"md5\":\"a564657fa75e86b747c955e9a471fb13\",\"sessionRole\":2,\"sourceId\":\"67362289\",\"bubbleId\":\"338785331586015554\",\"keyWordStatus\":false,\"messageType\":\"AUDIO\",\"fromApp\":\"201811\",\"user\":{\"roleId\":3,\"userId\":63559,\"avatar\":\"\\/avatar\\/2022\\/0102\\/63559xxobp64wfqd45t894pr6f653.jpg\",\"pfUrl\":\"\",\"vip\":false,\"teamLogo\":\"\\/mediasource\\/teamLogo2\\/all\\/snh48_n2.png\",\"nickName\":\"白色小狐狸\"}}",
-  "fromClientType": "iOS",
-  "time": 1641116507100,
-  "type": "audio",
-  "text": "",
-  "resend": false,
-  "callbackExt": "",
-  "status": "success",
-  "file": {
-    "size": 12455,
-    "ext": "aac",
-    "dur": 3436,
-    "url": "https://nim-nosdn.netease.im/NDA5MzEwOA==/bmltYV83MjUxNzg3MDQ1XzE2NDA1ODc4NzQ2NzdfYjNiOTU4M2MtNDRmOC00ZDgzLThiOTctMTZkZGY0YjdiZjU3",
-    "md5": "1c31f447f73a054bcffd27b6bb27e480",
-    "mp3Url": "https://nim-nosdn.netease.im/NDA5MzEwOA==/bmltYV83MjUxNzg3MDQ1XzE2NDA1ODc4NzQ2NzdfYjNiOTU4M2MtNDRmOC00ZDgzLThiOTctMTZkZGY0YjdiZjU3?audioTrans&type=mp3"
-  },
   "flow": "in"
 }]
 

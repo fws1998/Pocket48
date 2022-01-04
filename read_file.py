@@ -1,5 +1,6 @@
 import json
 import psycopg2
+import os
 
 
 def photo_audio_video(timestamp, body, type, room):
@@ -12,7 +13,7 @@ def photo_audio_video(timestamp, body, type, room):
     sql = "INSERT INTO " + type + " VALUES (" + "to_timestamp(" + str(timestamp) + "), \'" + url + "\'," + str(
         userId) + ",\'" + name + "\'," + room + ")"
     try:
-        print(sql)
+        # print(sql)
         cur.execute(sql)
         conn.commit()
     except psycopg2.errors.UniqueViolation as error:
@@ -20,13 +21,13 @@ def photo_audio_video(timestamp, body, type, room):
 
 
 def normal_text_msg(time, body, room):
-    if  body["messageType"] != "DELETE":
+    if  body["messageType"] != "DELETE" and body["messageType"] != "DISABLE_SPEAK":
         userId = body["user"]["userId"]
         name = body["user"]["nickName"]
 
     # body = json.loads(body)
         if userId in list:
-
+            sql = ""
             if "replyName" in body:
                 msg = body["text"]
                 reply_to = body["replyName"]
@@ -47,13 +48,19 @@ def normal_text_msg(time, body, room):
                 price = body["giftInfo"]["money"]
                 accecpId = body["giftInfo"]["acceptUserId"]
                 acceptName= body["giftInfo"]["acceptUserName"]'''
-                sql = ""
+
                 # sql = "INSERT INTO idol_msg VALUES (" + "to_timestamp(" + str(time) + "), \'" + gift + "\'," + userId + ",\'" + name + "\'," + room + ")"
+
+            elif body["messageType"] == "EXPRESSIMAGE":
+                msg = body["emotionRemote"]
+                sql = "INSERT INTO idol_msg VALUES (" + "to_timestamp(" + str(time) + "), \'" + msg + "\'," + str(
+                    userId) + ",\'" + name + "\'," + room + ")"
 
             else:
                 msg = body["text"]
                 sql = "INSERT INTO idol_msg VALUES (" + "to_timestamp(" + str(time) + "), \'" + msg + "\'," + str(
                     userId) + ",\'" + name + "\'," + room + ")"
+
 
             try:
                 if sql != "":
@@ -69,6 +76,10 @@ def flipcard(time, body):
     reply = body["answer"]
     userId = body["user"]["userId"]
     name = body["user"]["nickName"]
+    if "url" in reply:
+        reply = json.loads(reply)
+        reply = reply["url"]
+        print(reply)
     sql = "INSERT INTO flipcard VALUES (" + "to_timestamp(" + str(time) + "), \'" + question +"\', \'" + reply + "\'," + str(
         userId) + ",\'" + name + "\'" + ")"
     try:
@@ -103,24 +114,27 @@ if __name__ == '__main__':
             64422016, 64487703, 64487705, 64487708, 4344250371, 4344250372, 4344250373, 4344250374, 4528799751,
             4998561802, 5384437777, 5602541574, 6827278356, 6827278357, 6827278358, 7984906291, 8957984817, 8957984818,
             8957984819, 9276751976, 9276751977, 9276751978, 34306]
+    room_list = ['67313770']
     conn = psycopg2.connect(database="postgres", user="postgres", password="fws7609922", host="localhost", port="5432")
     print("Opened database successfully")
 
     cur = conn.cursor()
-
-    with open("test.json", 'r', encoding='UTF-8') as file:
-        room_info = json.load(file)
-    for i in room_info:
-        room = i["chatroomId"]
-        time_stamp = i["time"]/1000
-        msg_type = i["type"]
-        body = json.loads(i["custom"])
-        # print(body) 报错请删掉#
-        if msg_type == "image" or msg_type == "video" or msg_type == "audio":
-            photo_audio_video(time_stamp, i, msg_type, room)
-        elif msg_type == "text" and i["text"] == "偶像翻牌":
-            flipcard(time_stamp, body)
-        else:
-            normal_text_msg(time_stamp, body, room)
+    for i in room_list:
+        with os.popen("node c:\\nim-node-main\\src\\bin\\hist.js " + i) as p:
+            r = p.read()
+        with open("test.json", 'r', encoding='UTF-8') as file:
+            msg_info = json.load(file)
+        for i in msg_info:
+            room = i["chatroomId"]
+            time_stamp = i["time"]/1000
+            msg_type = i["type"]
+            body = json.loads(i["custom"])
+            # print(body)
+            if msg_type == "image" or msg_type == "video" or msg_type == "audio":
+                photo_audio_video(time_stamp, i, msg_type, room)
+            elif msg_type == "text" and i["text"] == "偶像翻牌":
+                flipcard(time_stamp, body)
+            else:
+                normal_text_msg(time_stamp, body, room)
 
     conn.close()
