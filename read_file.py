@@ -159,19 +159,22 @@ if __name__ == '__main__':
     for i in room_list:
         with os.popen("node c:\\nim-node-main\\src\\bin\\hist.js " + i) as p:
             r = p.read()
-        with open("test.json", 'r', encoding='UTF-8') as file:
-            msg_info = json.load(file)
-        for i in msg_info:
-            room = i["chatroomId"]
-            time_stamp = i["time"] / 1000
-            msg_type = i["type"]
-            body = json.loads(i["custom"])
-            # print(body)
-            if msg_type == "image" or msg_type == "video" or msg_type == "audio":
-                photo_audio_video(time_stamp, i, msg_type, room)
-            elif msg_type == "text" and i["text"] == "偶像翻牌":
-                flipcard(time_stamp, body)
-            else:
-                normal_text_msg(time_stamp, body, room)
+        try:
+            with open("test.json", 'r', encoding='UTF-8') as file:
+                msg_info = json.load(file)
+            for i in msg_info:
+                room = i["chatroomId"]
+                time_stamp = i["time"] / 1000
+                msg_type = i["type"]
+                body = json.loads(i["custom"])
+                # print(body)
+                if msg_type == "image" or msg_type == "video" or msg_type == "audio":
+                    photo_audio_video(time_stamp, i, msg_type, room)
+                elif msg_type == "text" and i["text"] == "偶像翻牌":
+                    flipcard(time_stamp, body)
+                else:
+                    normal_text_msg(time_stamp, body, room)
+        except FileNotFoundError as error:
+            print(error)
 
     conn.close()
